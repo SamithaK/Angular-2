@@ -10,6 +10,7 @@ import { AppRoutingModule, routingComponents} from 'app/app.routing';
 import { LoginComponent } from './page/login/login.component';
 import { AuthGuard } from 'app/AuthGuard';
 import {enableProdMode} from '@angular/core';
+import { NavBarComponent } from './view/nav-bar/nav-bar.component';
 enableProdMode();
 
 @NgModule({
@@ -17,7 +18,8 @@ enableProdMode();
     AppComponent,
     HomeComponent,
     routingComponents,
-    LoginComponent // can declare all the modules in side this array
+    LoginComponent,
+    NavBarComponent // can declare all the modules in side this array
   ],
   imports: [
     BrowserModule,

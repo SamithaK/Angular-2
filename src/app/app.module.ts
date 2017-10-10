@@ -1,3 +1,4 @@
+import { HttpMethodsProvider } from './service/http-methods/http-methods';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -8,6 +9,8 @@ import { HomeComponent } from './page/home/home.component';
 import { AppRoutingModule, routingComponents} from 'app/app.routing';
 import { LoginComponent } from './page/login/login.component';
 import { AuthGuard } from 'app/AuthGuard';
+import {enableProdMode} from '@angular/core';
+enableProdMode();
 
 @NgModule({
   declarations: [
@@ -22,7 +25,7 @@ import { AuthGuard } from 'app/AuthGuard';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard, HttpMethodsProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
